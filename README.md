@@ -35,4 +35,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # React Honeycomb
 
-React Honeycomb code courtesy of: https://github.com/taraspolovyi/react-honeycomb
+React Honeycomb code courtesy of [taraspolovyi](https://github.com/taraspolovyi/react-honeycomb).
+Inspired by [RedBlobGames](https://www.redblobgames.com/grids/hexagons/).

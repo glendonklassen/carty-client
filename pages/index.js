@@ -7,6 +7,9 @@ import range from 'lodash/range'
 
 const items = range(20)
 const sideLength = 64
+const hexClick = (item, index) => {
+  console.log(`You clicked hex ${item}.`)
+}
 
 export default function Home() {
   return (
@@ -31,6 +34,7 @@ export default function Home() {
           renderItem={(item, index) => (
             <Hexagon>
               <img
+                onClick={() => hexClick(item, index)}
                 src={`https://picsum.photos/${sideLength * 2}?random=${item}`}
                 alt={`Random #${item}`}
               />

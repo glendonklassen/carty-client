@@ -9,7 +9,6 @@ const Honeycomb = forwardRef(
 
     return (
       <HoneycombContext.Provider value={{ gap }}>
-        1
         <ul
           ref={ref}
           className={className}
