@@ -2,16 +2,16 @@ import Honeycomb from '../components/Honeycomb'
 import Hexagon from '../components/Hexagon'
 import styles from '../styles/Home.module.css'
 
-const sideLength = 64
+const sideLength = 52
 const hexClick = item => {
   console.log(`coord: q${item.Q}, r${item.R}, s${item.S} type: ${item.Type}`)
 }
 
 export async function getServerSideProps() {
-  const columns = 5
+  const columns = 8
   const req = {
     columns: columns,
-    rows: 5,
+    rows: 8,
   }
   const res = await fetch(process.env.CARTY_URL, {
     headers: {
