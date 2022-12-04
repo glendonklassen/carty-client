@@ -40,7 +40,7 @@ export default function Home(props) {
                 onClick={() => hexClick(item, index)}
                 src={`https://picsum.photos/${sideLength * 2}?random=${
                   item.Type
-                }`}
+                }&blur=2`}
                 alt={`Random #${item}`}
               />
             </Hexagon>
