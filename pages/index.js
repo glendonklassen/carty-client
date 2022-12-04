@@ -1,8 +1,6 @@
-import Head from 'next/head'
 import Honeycomb from '../components/Honeycomb'
 import Hexagon from '../components/Hexagon'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 
 const sideLength = 64
 const hexClick = item => {
@@ -31,14 +29,6 @@ export default function Home(props) {
   const { gridItems, columns } = props
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Carty Renderer</title>
-        <Link
-          rel="icon"
-          href="/favicon.ico"
-        />
-      </Head>
-
       <main className={styles.main}>
         <Honeycomb
           columns={columns}
