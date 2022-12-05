@@ -1,5 +1,5 @@
 import { HoneycombContext } from '../lib/helpers'
-import { useRef, useState, useEffect, useContext } from 'react'
+import { useContext } from 'react'
 
 const Hexagon = ({ children, className, style = {} }) => {
   const { gap } = useContext(HoneycombContext)

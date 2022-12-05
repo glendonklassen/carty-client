@@ -1,6 +1,7 @@
 import Honeycomb from '../components/Honeycomb'
 import Hexagon from '../components/Hexagon'
 import styles from '../styles/Home.module.css'
+import { useEffect, useState } from 'react'
 
 const sideLength = 52
 const hexClick = item => {
@@ -27,6 +28,7 @@ export async function getServerSideProps() {
 
 export default function Home(props) {
   const { gridItems, columns } = props
+  const [mouseEntered, setMouseEntered] = useState(-1)
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -38,9 +40,13 @@ export default function Home(props) {
             <Hexagon>
               <img
                 onClick={() => hexClick(item, index)}
+                onMouseEnter={() => setMouseEntered(index)}
                 src={`https://picsum.photos/${sideLength * 2}?random=${
                   item.Type
-                }&blur=2`}
+                }&blur=1`}
+                style={{
+                  opacity: mouseEntered == index ? 1 : 0.9,
+                }}
                 alt={`Random #${item}`}
               />
             </Hexagon>
