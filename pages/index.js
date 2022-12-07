@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 const sideLength = 52
 const hexClick = item => {
   console.log(
-    `coord: q${item.location.q}, r${item.location.R}, s${item.location.S} type: ${item.terrainType}`
+    `coord: q${item.location.q}, r${item.location.r}, s${item.location.s} type: ${item.terrainType}`
   )
 }
 
