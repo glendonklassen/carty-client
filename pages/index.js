@@ -5,14 +5,16 @@ import { useEffect, useState } from 'react'
 
 const sideLength = 52
 const hexClick = item => {
-  console.log(`coord: q${item.Q}, r${item.R}, s${item.S} type: ${item.Type}`)
+  console.log(
+    `coord: q${item.location.q}, r${item.location.R}, s${item.location.S} type: ${item.terrainType}`
+  )
 }
 
 export async function getServerSideProps() {
-  const columns = 8
+  const columns = 6
   const req = {
     columns: columns,
-    rows: 8,
+    rows: 6,
   }
   const res = await fetch(process.env.CARTY_URL, {
     headers: {
@@ -42,7 +44,7 @@ export default function Home(props) {
                 onClick={() => hexClick(item, index)}
                 onMouseEnter={() => setMouseEntered(index)}
                 src={`https://picsum.photos/${sideLength * 2}?random=${
-                  item.Type
+                  item.terrainType
                 }&blur=1`}
                 style={{
                   opacity: mouseEntered == index ? 1 : 0.9,
